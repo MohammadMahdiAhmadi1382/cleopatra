@@ -32,7 +32,7 @@
 }
 
 * {
-    font-family: 'francy';
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .francy {
@@ -246,7 +246,7 @@
 
 .toastify {
     width: 95% !important;
-    max-width: 100% !important;
+    max-width: 450px !important;
     font-size: 16px !important;
     padding: 15px !important;
 }
@@ -367,3 +367,157 @@ img[data-loaded="true"] {
 svg {
     transition: fill 0.3s ease;
 }
+
+.dropdown-menu.hidden {
+    display: none;
+}
+
+/* add style data table */
+.dataTables_info{
+    font-size: 12px !important;
+}
+
+.dataTables_length {
+    position: absolute;
+    bottom: -45px;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    background-color: #f9f9f9 !important;
+    padding: 8px 12px !important;
+    border-radius: 5px !important;
+    border: 1px solid #ddd !important;
+}
+
+.dataTables_length label {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #333 !important;
+}
+.dataTables_length select {
+    font-size: 14px !important;
+    padding: 4px 8px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    background-color: #fff !important;
+    color: #333 !important;
+    cursor: pointer !important;
+}
+.dataTables_length select:hover {
+    border-color: #007bff !important;
+    background-color: #f0f8ff !important;
+}
+
+.paginate_button.first {
+    background-color: #28a745 !important;
+    color: white !important;
+    border-radius: 5px !important;
+}
+
+.paginate_button.last {
+    background-color: #dc3545 !important;
+    color: white !important;
+    border-radius: 5px !important;
+}
+
+.paginate_button.first:hover,
+.paginate_button.last:hover {
+    background-color: #333 !important;
+    color: white !important;
+}
+
+.dataTables_paginate{
+    position: relative;
+    top:10px;
+    color:white !important;
+}
+
+.paginate_button.current {
+    background-color: #007bff !important;
+    color: white !important;
+    border: 2px solid #007bff !important;
+    border-radius: 50% !important;
+    font-weight: bold !important;
+    width:40px !important;
+    height:40px !important;
+    padding: 0px !important;
+    border-radius: 50% !important;
+    padding: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color:white !important;
+}
+.paginate_button.current:hover {
+    background-color: #0056b3 !important;
+    border-color: #0056b3 !important;
+    color:white !important;
+}
+/* .paginate_button {
+    background-color: #f1f1f1 !important;
+    color: white !important;
+    border: 1px solid #ccc !important;
+} */
+
+.paginate_button:hover {
+    background-color: #007bff !important;
+    color: white !important;
+    border-color: #007bff !important;
+}
+
+
+/* .dropdown-container2 {
+    position: relative !important;
+    display: inline-block !important;
+}
+
+.dropdown-container2 .dropdown-toggle {
+    padding: 8px 16px !important;
+    background-color: #1a202c !important;
+    color: white !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+}
+
+.dropdown-container2 .dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background-color: white !important;
+    color: black !important;
+    width: auto !important;
+    min-width: 150px !important;
+    border-radius: 4px !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important;
+    display: none !important;
+}
+
+.dropdown-container2 .menu-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.dropdown-container2 .menu-list li {
+    padding: 8px !important;
+}
+
+.dropdown-container2 .menu-list li:hover {
+    background-color: #cbd5e0 !important;
+}
+
+.dropdown-container2 .hidden {
+    display: none !important;
+} */
+
+
+.modal__overlay {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+  }
+  .modal__container {
+    background: white !important;
+    padding: 20px !important;
+    border-radius: 10px !important;
+    width: 400px !important;
+  }

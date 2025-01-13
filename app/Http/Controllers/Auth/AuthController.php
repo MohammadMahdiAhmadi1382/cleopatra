@@ -22,7 +22,7 @@ class AuthController extends Controller
         try {
             // Validate user credentials
             $credentials = [
-                'email' => $request->email,
+                'email' => $request->username,
                 'password' => $request->password,
             ];
 
@@ -44,4 +44,5 @@ class AuthController extends Controller
         }
         return response()->json($message, 200);
     }
+
 }

@@ -1,3 +1,9 @@
+@php
+
+// return dd(Hash::make(123456789));
+
+@endphp
+
 @extends('auth.layouts.app')
 
 {{-- title --}}

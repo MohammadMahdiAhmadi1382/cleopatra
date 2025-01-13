@@ -22,6 +22,7 @@ class Kernel extends HttpKernel
     ];
 
     protected $routeMiddleware = [
-        // 'authenticated_access' => \App\Http\Middleware\Auth\AuthenticatedAccess::class,
+        'authenticated_access' => \App\Http\Middleware\Auth\AuthenticatedAccess::class,
+        'not_authenticated_access' => \App\Http\Middleware\Auth\NoAuthenticated::class,
     ];
 }

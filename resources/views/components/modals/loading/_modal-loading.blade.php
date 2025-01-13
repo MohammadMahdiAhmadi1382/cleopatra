@@ -1,5 +1,5 @@
 <div data-modal data-modal-loading
-    class="fixed z-[999999999999999999] w-screen h-screen bg-black/50 backdrop-blur-sm flex flex-wrap justify-center content-center items-center">
+    class="fixed z-[999999999999999999] top-0 left-0 w-screen h-screen bg-black/50 backdrop-blur-sm flex flex-wrap justify-center content-center items-center">
     <div>
         <svg class="gegga">
             <defs>

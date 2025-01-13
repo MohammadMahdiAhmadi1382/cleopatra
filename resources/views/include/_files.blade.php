@@ -57,6 +57,21 @@ href="{{ asset('assets/plugin/animate/animate.min.css') }}"
 {{-- lozad --}}
 <script type="text/javascript" src="{{ asset('assets/plugin/lozad/lozad.min.js') }}"></script>
 
-
 {{-- js --}}
-<script src="{{ asset('assets/js/scripts.js') }}"></script>
+{{-- <script src="{{ asset('assets/js/scripts.js') }}"></script> --}}
+
+
+{{-- DataTables CSS --}}
+<link rel="stylesheet" href="{{ asset('assets/plugin/dataTables/jquery.dataTables.min.css') }}">
+
+{{-- DataTables Responsive CSS --}}
+<link rel="stylesheet" href="{{ asset('assets/plugin/dataTables/responsive.dataTables.min.css') }}">
+
+{{-- DataTables JS --}}
+<script src="{{ asset('assets/plugin/dataTables/jquery.dataTables.min.js') }}"></script>
+
+{{-- DataTables Responsive JS --}}
+<script src="{{ asset('assets/plugin/dataTables/dataTables.responsive.min.js') }}"></script>
+
+
+<script src="{{ asset('assets/plugin/sweetalert/sweetalert2@11.js') }}"></script>

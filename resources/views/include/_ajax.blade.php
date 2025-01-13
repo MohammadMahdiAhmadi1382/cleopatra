@@ -160,7 +160,8 @@
             method: 'POST',
             data: {
                 _method: 'DELETE',
-                _token: $('meta[name="csrf-token"]').attr('content')
+                _token: $('meta[name="csrf-token"]').attr('content'),
+                data:data
             },
             success: successCallback,
             error: errorCallback

@@ -16,4 +16,8 @@ class PageController extends Controller
     public function login(AuthRequest $request){
         return AuthController::login($request);
     }
+
+
+
+
 }

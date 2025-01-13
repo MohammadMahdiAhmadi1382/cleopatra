@@ -1,14 +1,81 @@
 <script src="{{ asset('assets/plugin/ripple/ripple.min.js') }}"></script>
 
 <script>
+    // fnction before load web
     $(window).on('load', function() {
         $('[data-modal-loading]').fadeOut('slow', function() {
             $(this).remove(); // remove loading after load on DOM
         });
     });
 
+    // main js
     $(document).ready(function() {
+        $(".dropdown-toggle").on("click", function() {
+            const $menu = $(this).siblings(".dropdown-menu");
+            $menu.toggleClass("hidden");
+        });
+        $(document).on("click", function(event) {
+            if (!$(event.target).closest(".dropdown-container").length) {
+                $(".dropdown-menu").addClass("hidden");
+            }
+        });
+        // Handle click on the menu toggle
+        $("[data-dropdown-toggle]").on("click", function() {
+            const $container = $(this).closest("[data-dropdown-container]");
+            const $menu = $container.find("[data-dropdown-menu]");
+            const isVisible = $menu.hasClass("hidden");
 
+            // Toggle menu visibility
+            $menu.toggleClass("hidden");
+            $menu.toggleClass("flex");
+
+            // Update attributes
+            $container.attr("data-dropdown-open", isVisible ? "true" : "false");
+        });
+
+        // Optional: Close the dropdown if clicked outside
+        $(document).on("click", function(event) {
+            if (!$(event.target).closest("[data-dropdown-container]").length) {
+                // Close any open dropdowns
+                $("[data-dropdown-menu]").addClass("hidden");
+                $("[data-dropdown-menu]").removeClass("flex");
+                $("[data-dropdown-container]").removeAttr("data-dropdown-open");
+            }
+        });
+
+        // add style show menu
+        $(document).on('click', '.show-menu-main', function() {
+            $('#mobile-menu').toggleClass('hidden');
+        });
+
+        // Close the menu when clicking outside
+        $(document).on("click", function(e) {
+            if (!$(e.target).closest("[data-dropdown-container]").length) {
+                $("[data-dropdown-menu]").addClass("hidden");
+                $("[data-dropdown-container]").attr("data-dropdown-open", "false");
+            }
+        });
+
+
+        // Initialize dropdown
+        $(".dropdown-toggle").on("click", function() {
+            const $menu = $(this).closest(".dropdown-container").find(".dropdown-menu");
+            const isExpanded = $(this).attr("aria-expanded") === "true";
+
+            // Toggle menu visibility
+            $menu.toggleClass("hidden");
+
+            // Update aria-expanded attribute
+            $(this).attr("aria-expanded", !isExpanded);
+        });
+
+        // Close dropdown when clicking outside
+        $(document).on("click", function(e) {
+            if (!$(e.target).closest(".dropdown-container").length) {
+                $(".dropdown-menu").addClass("hidden");
+                $(".dropdown-toggle").attr("aria-expanded", "false");
+            }
+        });
         // Initialize Lozad.js with default settings
         const observer = lozad(); // Create an instance of Lozad.js
 
@@ -93,9 +160,10 @@
         $('[data-modal]').removeClass('block').addClass('hidden');
     }
 </script>
+
 {{-- create function js logouts --}}
 @auth
-    <script>
+    {{-- <script>
         // Function to handle logout
         function logout() {
             $.ajax({
@@ -117,5 +185,6 @@
             }
 
         }
-    </script>
+    </script> --}}
 @endauth
+
